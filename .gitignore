@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Environments
+venv/
+env/
+.env
+.venv
+
+# Django specific stuff:
+*.log
+*.pot
+*.mo
+*.htmlc # For compiled templates
+local_settings.py  # If you use a separate local settings file
+db.sqlite3         # The default SQLite database file
+/mediafiles/       # User-uploaded media files (if applicable)
+
+# IDE specific files
+.vscode/           # VS Code
+.idea/             # PyCharm/IntelliJ
+*.sublime-project
+*.sublime-workspace
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Machine Learning specific files:
+*.h5               # Keras/TensorFlow model files (like NN.h5)
+*.pkl              # Python pickle files for models/data
+*.csv              # Generated CSVs or large datasets that shouldn't be in Git (consider if your data should be tracked or not)
+# If your dataset.csv, Training.csv, Testing.csv are very large or regularly change, you might add them here.
+# Otherwise, if they are stable and relatively small, you might keep them.
+# dataset.csv
+# Training.csv
+# Testing.csv
+
+# Generated reports/files
+*.pdf              # Like Health_Card.pdf, report.pdf
+*.png              # Like HEALTH_CARD.png
+
+# Python development artifacts
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Jupyter Notebook files
+.ipynb_checkpoints
