@@ -1,0 +1,138 @@
+/* Body Background and Font Styles */
+body {
+    font-size: 1em !important;
+    color: #000 !important;
+    font-family: Arial !important;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* Allow main content to grow and push footer down */
+}
+
+/* Custom CSS for dropdown (form-select) */
+select.form-select {
+    border: 1px solid #16041f; /* A darker, more defined border */
+    border-radius: .25rem; /* Maintain Bootstrap's rounded corners */
+    background-color: #f8f9fa; /* Light background for contrast */
+    color: #212529; /* Darker text color for readability */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); /* Subtle inner shadow */
+}
+
+select.form-select:focus {
+    border-color: #bb8f16; /* Highlight border with a theme color on focus */
+    box-shadow: 0 0 0 0.25rem rgba(187, 143, 22, 0.25); /* Matching shadow on focus */
+}
+
+/* Custom CSS for tables */
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #dee2e6; /* Softer, Bootstrap-like border */
+    padding: 8px;
+    text-align: center;
+}
+
+/* New colors for #customers (Patient Info) - cleaner, more neutral look */
+#customers tr:nth-child(even){background-color: #f8f9fa;} /* Very light gray, Bootstrap's lightest background */
+#customers tr:nth-child(odd){background-color: #e9ecef;} /* Slightly darker light gray, Bootstrap's default for striped */
+#customers tr:hover {background-color: #e2e6ea; color: #000;} /* Adjusted hover for better contrast with new backgrounds */
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #0d6efd; /* A standard Bootstrap blue for the header */
+    color: #fff; /* White text for better contrast on the blue header */
+}
+
+#customers2 {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers2 td, #customers2 th {
+    border: 3px solid #16041f;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Original colors for #customers2 (Current Disease) - these were fine */
+#customers2 tr:nth-child(even){background-color: #D4EDDA;}
+#customers2 tr:nth-child(odd){background-color: #C3E6CB;}
+#customers2 tr:hover {background-color: #f1f1f1; color: rgba(0, 0, 170, 0.858);}
+
+#customers2 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #73b452;
+    color: rgba(250, 250, 250, 0.858);
+}
+
+#customers3 {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers3 td, #customers3 th {
+    border: 3px solid #16041f;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Original colors for #customers3 (Recovered Disease) - these were fine */
+#customers3 tr:nth-child(even){background-color: #CCE5FF;}
+#customers3 tr:nth-child(odd){background-color: #B8DAFF;}
+#customers3 tr:hover {background-color: #f1f1f1; color: rgba(0, 0, 170, 0.858);}
+
+#customers3 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #6b95c5;
+    color: rgba(250, 250, 250, 0.858);
+}
+
+/* Blinking Background Animations */
+.blink-bg {
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    animation: blinkingBackground 4s infinite;
+}
+
+@keyframes blinkingBackground {
+    0% { background-color: #10c018;}
+    25% { background-color: #1056c0;}
+    50% { background-color: #ef0a1a;}
+    75% { background-color: #254878;}
+    100% { background-color: #04a1d5;}
+}
+
+.blink-bg2 {
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    animation: blinkingBackground2 2s infinite;
+}
+
+@keyframes blinkingBackground2 {
+    0% { background-color: #254878;}
+    25% { background-color: #04a1d5;}
+    50% { background-color: #10c018;}
+    75% { background-color: #1056c0;}
+    100% { background-color: #ef0a1a;}
+}

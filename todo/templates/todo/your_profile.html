@@ -1,0 +1,80 @@
+{% extends "todo/base.html" %}
+
+{% block content %}
+
+<main class="container my-5">
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-9 col-lg-7">
+            <h3 class="text-center mb-4">Your Profile</h3>
+            <div class="table-responsive">
+                <table id="customers" class="table table-bordered table-hover">
+                    <thead> {# Added thead for semantic structure #}
+                        {% for ui in user_info %}
+                            {% if ui.role == "Doctor" %}
+                                <tr>
+                                    <th colspan="2" class="text-center" style="color: rgba(125, 7, 11, 0.858);"><h3>Doctor Profile</h3></th>
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </thead>
+                    <tbody> {# Added tbody for semantic structure #}
+                        {% for ui in user_info %}
+                            <tr>
+                                <th>Name</th>
+                                <td> {# Changed from th to td for data #}
+                                    {% if ui.role == "Doctor" %}
+                                    Dr.
+                                    {% endif %}
+                                    {{ ui.first_name }} {{ ui.last_name }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Aadhar Card Number</td>
+                                <td>{{ user.username }}</td>
+                            </tr>
+                            <tr>
+                                <td>Gender</td>
+                                <td>{{ ui.gender }}</td>
+                            </tr>
+                            <tr>
+                                <td>Date of Birth</td>
+                                <td>{{ ui.dob }}</td>
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td>{{ ui.Address }}</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile Number</td>
+                                <td>+91 {{ ui.mobile }}</td>
+                            </tr>
+                            <tr>
+                                <td>Email ID</td>
+                                <td>{{ ui.Email_ID }}</td>
+                            </tr>
+                            <tr>
+                                {% if ui.role == "Doctor" %}
+                                    <td>License ID</td>
+                                {% else %}
+                                    <td>Health Insurance Number</td>
+                                {% endif %}
+                                <td>{{ ui.hin }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-1">
+        <div class="col-md-2">
+            <form method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-success">Download Health Card</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
